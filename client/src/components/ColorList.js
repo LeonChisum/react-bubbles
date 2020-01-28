@@ -1,32 +1,26 @@
 import React, { useState } from "react";
 import axios from "axios";
-
 const initialColor = {
   color: "",
   code: { hex: "" }
 };
-
 const ColorList = ({ colors, updateColors }) => {
   console.log(colors);
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
-
   const editColor = color => {
     setEditing(true);
     setColorToEdit(color);
   };
-
   const saveEdit = e => {
     e.preventDefault();
     // Make a put request to save your updated color
     // think about where will you get the id from...
     // where is is saved right now?
   };
-
   const deleteColor = color => {
     // make a delete request to delete this color
   };
-
   return (
     <div className="colors-wrap">
       <p>colors</p>
@@ -34,12 +28,8 @@ const ColorList = ({ colors, updateColors }) => {
         {colors.map(color => (
           <li key={color.color} onClick={() => editColor(color)}>
             <span>
-              <span className="delete" onClick={e => {
-                    e.stopPropagation();
-                    deleteColor(color)
-                  }
-                }>
-                  x
+              <span className="delete" onClick={() => deleteColor(color)}>
+                x
               </span>{" "}
               {color.color}
             </span>
@@ -85,5 +75,4 @@ const ColorList = ({ colors, updateColors }) => {
     </div>
   );
 };
-
 export default ColorList;
