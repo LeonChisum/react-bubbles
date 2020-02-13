@@ -33,8 +33,16 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 A token is something that is used by the server that could be saved in localstorage of the DOM and it is used to become an authenticator for different routes of your application.
 
 - [ ] What steps can you take in your web apps to keep your data secure?
+
+You could provide an authentication header when trying to access data via api call.
+
 - [ ] Describe how web servers work.
+
+Web servers act as a computer that stores information and recieves requests and then returns a response.
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+GET, POST, PUT, DELETE, PATCH.
 
 
 ## Project Set Up
